@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "rollup": "rollup -c"
+    "rollup": "xcopy /Y css\\font.css .\\dist\\esm\\font.css && rollup -c"
   },
   "author": "Ethan Marreel",
   "license": "ISC",
@@ -15,6 +15,7 @@
     "@rollup/plugin-node-resolve": "^13.1.3",
     "@rollup/plugin-typescript": "^8.3.1",
     "@types/react": "^17.0.43",
+    "@types/reflexbox": "^4.0.4",
     "react": "^18.0.0",
     "rollup": "^2.70.1",
     "rollup-plugin-dts": "^4.2.0",
@@ -25,5 +26,9 @@
   "files": [
     "dist"
   ],
-  "types": "dist/index.d.ts"
+  "types": "dist/index.d.ts",
+  "dependencies": {
+    "emotion-theming": "^11.0.0",
+    "reflexbox": "^4.0.6"
+  }
 }

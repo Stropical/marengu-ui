@@ -10,20 +10,18 @@ export interface TextProps {
     theme: any;
 }
 
-const Text = (props: TextProps) => {
+const Body = (props: TextProps) => {
    return (
        <Box
         tx='text'
         {...props}
         __css={{
-            font:  MarenguTheme.fonts.body,
-            fontWeight: "600",
-            color: MarenguTheme.colors.lightgray,
-            fontSize: MarenguTheme.fontSizes[1],
-            letterSpacing: MarenguTheme.fontSpacing[2],
+            width: '100%',
+            height: '100%',
+            background: MarenguTheme.colors.black
         }}
         />
    );
 }
 
-export default Text;
+export default Body;

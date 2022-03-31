@@ -10,20 +10,25 @@ export interface TextProps {
     theme: any;
 }
 
-const Text = (props: TextProps) => {
+const SubTitle = (props: TextProps) => {
    return (
-       <Box
-        tx='text'
-        {...props}
-        __css={{
+       <h2
+        
+        style={{
             font:  MarenguTheme.fonts.body,
-            fontWeight: "600",
+            letterSpacing: "0.5em",
+            fontWeight: "700",
             color: MarenguTheme.colors.lightgray,
-            fontSize: MarenguTheme.fontSizes[1],
-            letterSpacing: MarenguTheme.fontSpacing[2],
+            fontSize: "20px",
+            marginTop: "40px",
+            marginLeft: "80px",
+            width: "450px"
+            
         }}
-        />
+        >
+            {props.children}
+        </h2>
    );
 }
 
-export default Text;
+export default SubTitle;
